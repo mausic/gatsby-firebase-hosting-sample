@@ -1,0 +1,42 @@
+name: Deploy to Firebase Hosting on merge to main branch
+on:
+  # handle merges and pushes to main branch
+  push:
+    branches:
+      - main
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # checkout code
+      - uses: actions/checkout@v2
+      # set node version to v12
+      - name: Set Node.js
+        uses: actions/setup-node@master
+        with:
+          node-version: 12
+      # install dependencies
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      # build
+      - name: Build
+        run: yarn build
+        env:
+          CI: true
+          # other ENV variables used for build process goes here
+          # you must bind ENV variables to github secrets,
+          # so they will be used during GitHub Action workflow)
+          # example
+          # SOME_ENV_VARIABLE: ${{ secrets.ENV_VARIABLE_NAME_AT_GITHUB_SECRETS }}
+      # deploy to Firebase
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          # TO GET THE FOLLOWING SECRET NAME RUN 'firebase init hosting:github' IN TERMINAL
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_GATSBY_FIREBASE_HOSTING_SAMPLE }}"
+          # WITH THIS LINE WE SPECIFY THAT OUR WEBSITE SHOULD GO LIVE (PRODUCTION!)
+          channelId: live
+          # THIS IS FIREBASE PROJECT ID. UPDATE IT TO YOURS PROJECT ID
+          projectId: gatsby-firebase-hosting-sample
+        env:
+          FIREBASE_CLI_PREVIEWS: hostingchannels
