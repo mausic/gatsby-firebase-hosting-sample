@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-firebase-hosting-sample",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Sample project for blog post about hosting Gatsby.js website at Firebase",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Maksym Ryndia <ryndya.maxim@gmail.com>",
   "dependencies": {
     "gatsby": "^3.0.1",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
@@ -23,9 +23,14 @@
     "prettier": "2.2.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "firebase",
+    "hosting",
+    "deploy",
+    "github",
+    "workflows"
   ],
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -38,9 +43,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/mausic/gatsby-firebase-hosting-sample"
   }
 }
