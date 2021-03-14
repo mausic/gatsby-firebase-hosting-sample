@@ -1,4 +1,4 @@
-name: Deploy to Firebase Hosting on merge to main branch
+name: Deploy to Firebase Hosting (preview) on PR to main branch
 on:
   # handle pull requests to main branch
   pull_request:
