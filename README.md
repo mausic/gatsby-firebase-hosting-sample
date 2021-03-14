@@ -1,4 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com" style="margin-right: 10px">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" height="60" />
@@ -7,6 +6,10 @@
     <img alt="Firebase" src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg" height="60" />
   </a>
 </p>
+
+![Firebase Hosting Live](https://github.com/mausic/gatsby-firebase-hosting-sample/actions/workflows/deploy-to-firebase-live.yml/badge.svg)
+![Firebase Hosting Preview](https://github.com/mausic/gatsby-firebase-hosting-sample/actions/workflows/deploy-to-firebase-preview.yml/badge.svg)
+
 <h1 align="center">
   Deploy Gatsby.js to Firebase Hosting guide source code
 </h1>
